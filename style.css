@@ -1,0 +1,51 @@
+body {
+	font-family: Lato;
+}
+
+#header {
+	font-weight: bold;
+	font-size: 28px;
+}
+
+#player-to-move-color {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	margin-left: 8px;
+}
+
+#player-to-move-text {
+	display: inline-block;
+}
+
+#game-canvas-container {
+	display: inline-block;
+}
+
+#player-to-move {
+	vertical-align: top;
+	/* float: right; */
+	display: inline-block;
+	margin-left: 20px;
+}
+
+#winner {
+	position: absolute;
+	top: 220px;
+	left: 64px;
+	padding: 80px;
+	font-size: 40px;
+	font-weight: bold;
+	border-radius: 72px;
+	border-width: 4px;
+	border-style: solid;
+	border-color: white;
+	text-align: center;
+	cursor: pointer;
+	visibility: hidden;
+}
+
+canvas {
+	border-radius: 24px;
+}

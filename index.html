@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+	<head>
+		<title>Hanoi</title>
+		<script src="main.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	</head>
+
+	<body onLoad="onLoad();">
+		<div id="header">Hanoi</div>
+		<hr />
+		<div id="game-container">
+			<div id="game-canvas-container">
+				<canvas id="canvas" width="600" height="600"></canvas>
+			</div>
+			<div id="player-to-move">
+				<div id="player-to-move-text">
+					To move:
+				</div>
+				<div id="player-to-move-color"></div>
+			</div>
+		</div>
+		<div id="winner" onClick="reset();">
+			<div id="win-player">WINNER!</div>
+			<div>Click to Play Again</div>
+		</div>
+	</body>
+
+</html>
