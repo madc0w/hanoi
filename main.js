@@ -3,7 +3,7 @@ const playerColors = {
 	2: '#0251db'
 };
 const numRings = 3;
-const numPosts = [2, 1, 2];
+const numPosts = [2, 3, 2];
 const postRadius = 20;
 const maxRingRadius = 72;
 let canvas, ctx, playerToMove, selectedPost, posts;
@@ -93,11 +93,11 @@ function click(event) {
 	let clickedPost = null;
 	for (const post of posts) {
 		if (selectedPost || post.rings.length == 0 || post.rings[post.rings.length - 1].player == playerToMove) {
-			const radius = post.rings.length == 0 ? postRadius : post.rings[0].radius;
+			// const radius = post.rings.length == 0 ? postRadius : post.rings[0].radius;
 			const dist = Math.sqrt((post.x - x) * (post.x - x) + (post.y - y) * (post.y - y));
 			// console.log('radius', radius);
 			// console.log('dist', dist);
-			if (dist < radius) {
+			if (dist < maxRingRadius) {
 				clickedPost = post;
 				break;
 			}
@@ -105,6 +105,9 @@ function click(event) {
 	}
 	// console.log('clickedPost', clickedPost);
 	if (clickedPost) {
+		if (!selectedPost && clickedPost.rings.length == 0) {
+			return;
+		}
 		if (selectedPost && (clickedPost.rings.length == 0 || clickedPost.rings[clickedPost.rings.length - 1].radius > selectedPost.rings[selectedPost.rings.length - 1].radius)) {
 			const ring = selectedPost.rings.pop();
 			if (!ring) {
