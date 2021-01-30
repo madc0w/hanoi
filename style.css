@@ -7,11 +7,6 @@ body {
 	font-size: 28px;
 }
 
-#player-to-move {
-	/* float: right; */
-	/* margin-left: 8px; */
-}
-
 #player-to-move-color {
 	display: inline-block;
 	width: 20px;
@@ -32,6 +27,7 @@ body {
 	display: inline-block;
 	vertical-align: top;
 	width: calc(98% - 540px);
+	max-width: 400px;
 	margin-left: 12px;
 }
 
@@ -49,6 +45,11 @@ body {
 	text-align: center;
 	cursor: pointer;
 	visibility: hidden;
+}
+
+#instuctions-header {
+	font-weight: bold;
+	line-height: 24px;
 }
 
 canvas {
