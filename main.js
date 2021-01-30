@@ -3,7 +3,7 @@ const playerColors = {
 	2: '#0251db'
 };
 const numRings = 3;
-const numPosts = [2, 3, 2];
+const numPosts = [2, 1, 2];
 const postRadius = 20;
 const maxRingRadius = 72;
 let canvas, ctx, playerToMove, selectedPost, posts;
@@ -105,7 +105,7 @@ function click(event) {
 	}
 	// console.log('clickedPost', clickedPost);
 	if (clickedPost) {
-		if (!selectedPost && clickedPost.rings.length == 0) {
+		if ((!selectedPost && clickedPost.rings.length == 0) || (selectedPost && clickedPost.rings.length > 0 && clickedPost.rings[0].player != playerToMove)) {
 			return;
 		}
 		if (selectedPost && (clickedPost.rings.length == 0 || clickedPost.rings[clickedPost.rings.length - 1].radius > selectedPost.rings[selectedPost.rings.length - 1].radius)) {
