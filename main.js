@@ -5,7 +5,7 @@ const playerColors = {
 const numRings = 3;
 const numPosts = [2, 1, 2];
 const postRadius = 20;
-const maxRingRadius = 80;
+const maxRingRadius = 72;
 let canvas, ctx, playerToMove, selectedPost, posts;
 
 function onLoad() {
