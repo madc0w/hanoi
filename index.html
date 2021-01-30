@@ -16,11 +16,19 @@
 			<div id="game-canvas-container">
 				<canvas id="canvas" width="520" height="520"></canvas>
 			</div>
-			<div id="player-to-move">
-				<div id="player-to-move-text">
-					To move:
+			<div id="info">
+				<div id="player-to-move">
+					<div id="player-to-move-text">
+						To move:
+					</div>
+					<div id="player-to-move-color"></div>
 				</div>
-				<div id="player-to-move-color"></div>
+				<div id="instructions">
+					<hr />
+					Players take turns moving their own rings. A player may move his ring to an empty post or on top of a ring of either color that is larger than the ring being
+					moved.<br /><br />
+					The first player to move all of his rings to either of the posts on the opposite side of the board wins!
+				</div>
 			</div>
 		</div>
 		<div id="winner" onClick="reset();">
